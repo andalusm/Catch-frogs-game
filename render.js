@@ -1,11 +1,18 @@
 const GenGame = function () {
+    const ALMOST_LOSE_TIME = 3;
+    const MAX_TOP = 90
+    const MAX_LEFT = 91
+
+    const _sizaCalc= function(top){
+        return Math.floor((50 * top) / 100 + 10)
+    }
 
     const _generateFrog = function (i) {
         $(".play").removeClass("won lost")
         const frog = $("<div class='frog'><i class='fa-solid fa-frog'></i></div>")
-        const top = Math.floor(Math.random() * 90);
-        const left = Math.floor(Math.random() * 91);
-        const size = Math.floor((50 * top) / 100 + 10)
+        const top = Math.floor(Math.random() * MAX_TOP);
+        const left = Math.floor(Math.random() * MAX_LEFT);
+        const size = _sizaCalc();
         const randomColor = Math.floor(Math.random() * 16777215).toString(16);
         frog.css("top", top + "%")
         frog.css("left", left + "%")
@@ -46,7 +53,7 @@ const GenGame = function () {
     const updateTime = function (timer) {
         if (timer === Math.floor(timer)) {
             $(".timer").text(timer + " Seconds Left");
-            if (timer > 3)
+            if (timer > ALMOST_LOSE_TIME)
                 $(".timer").css("color", "black")
             else
                 $(".timer").css("color", "red")

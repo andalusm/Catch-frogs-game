@@ -3,16 +3,18 @@ const FrogGame = function () {
     let _frogs = -1;
     let _timer = -1;
     const MAX_LEVEL = 6;
+    const DECREASE_TIME = 0.5
+    const LEVEL_TO_TIME = 2
     const _levelUp = function () {
         _level++
         _frogs = _level;
-        _timer = 2 + _level;
+        _timer = LEVEL_TO_TIME + _level;
     }
 
     const restartGame = function(){
         _level = 1;
         _frogs = 1;
-        _timer = 3;
+        _timer = LEVEL_TO_TIME + _level;
     }
 
     const caughtFrog = function () {
@@ -27,7 +29,7 @@ const FrogGame = function () {
     }
     const decreaseTime = function(){
         if(_timer > 0)
-            _timer = _timer - 0.5
+            _timer = _timer - DECREASE_TIME
     }
     const wonGame = function () {
         return _level === MAX_LEVEL;

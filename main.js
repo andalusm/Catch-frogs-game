@@ -1,5 +1,6 @@
 const frogGame = FrogGame()
 const generator = GenGame()
+const UPDATE_TIME = 500
 
 const render = function () {
 
@@ -34,6 +35,6 @@ setInterval(() => {
             generator.gameLost()
         }
     }
-}, 500);
+}, UPDATE_TIME);
 
 render()
