@@ -3,6 +3,8 @@
 ## Description
 
 Welcome to Frog Catcher, a simple and fun JavaScript game where your objective is to catch frogs in five exciting levels. Test your reflexes as you navigate through each level, honing your skills to become the ultimate frog catcher!
+
+
 ![Game Screenshot](https://github.com/andalusm/catch-frogs/blob/main/frog_game.PNG)
 
 ## Table of Contents
