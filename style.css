@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    height: 100%;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    font-size: larger;
+    color: #061A2E;
+}
+
+.game{
+    display: grid;
+    grid-template-rows: 1fr 18fr 3fr;
+    grid-template-areas: "t""p""i";
+    height: 100vh;
+}
+
+.timer{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color:#28C466;
+    grid-area: t;
+}
+
+.play{
+    position: relative;
+    padding: 20px;
+    background-color: #22A356;
+    grid-area: p;
+}
+.info{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);    
+    background-color:#28C466;
+    grid-area: i;
+}
+
+.level{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.start{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2C8BD5;
+    border: 1px solid #2472AE;
+}
+.won {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+
+}
+.lost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: red;
+
+}
+
+.frog{
+    position: absolute;
+}
