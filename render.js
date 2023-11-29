@@ -9,10 +9,11 @@ const GenGame = function () {
 
     const _generateFrog = function (i) {
         $(".play").removeClass("won lost")
+        $(".play").css("position","relative")
         const frog = $("<div class='frog'><i class='fa-solid fa-frog'></i></div>")
         const top = Math.floor(Math.random() * MAX_TOP);
         const left = Math.floor(Math.random() * MAX_LEFT);
-        const size = _sizaCalc();
+        const size = _sizaCalc(top);
         const randomColor = Math.floor(Math.random() * 16777215).toString(16);
         frog.css("top", top + "%")
         frog.css("left", left + "%")
@@ -66,12 +67,14 @@ const GenGame = function () {
     const gameWon = function () {
         $(".left").text("0 Frogs Left")
         $(".play").empty();
+        $(".play").css("position","inherit")
         $(".play").addClass("won")
         $(".play").text("YOU WON CONGRATS!!")
         $(".start").text("Start");
     }
     const gameLost = function () {
         $(".play").empty();
+        $(".play").css("position","inherit")
         $(".play").addClass("lost")
         $(".play").text("Alas, no more froggies for you")
         $(".start").text("Start");
