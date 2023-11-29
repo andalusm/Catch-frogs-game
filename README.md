@@ -23,7 +23,7 @@ Welcome to Frog Catcher, a simple and fun JavaScript game where your objective i
 
 1. Clone the repository to your local machine.
     ```bash
-    git clone https://github.com/your-username/frog-catcher.git
+    git clone https://github.com/andalusm/catch-frogs
     ```
 
 2. Open the `index.html` file in your preferred web browser.
