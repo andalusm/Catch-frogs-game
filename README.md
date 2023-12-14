@@ -24,6 +24,16 @@ Welcome to Frog Catcher, a simple and fun JavaScript game where your objective i
 
 ## How to Play
 
+There are two ways to play:
+
+Cloning the repository or just entering the github.io website
+
+### Website:
+
+https://andalusm.github.io/Catch-frogs-game/
+
+### Cloning:
+
 1. Clone the repository to your local machine.
     ```bash
     git clone https://github.com/andalusm/catch-frogs
